@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>outline</Name>
+  <Repository>outlinewiki/outline</Repository>
+  <Registry>https://registry.hub.docker.com/u/outlinewiki/outline/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support></Support>
+  <Project/>
+  <Overview>Outline: The fastest wiki and knowledge base for growing teams.</Overview>
+  <Category></Category>
+  <WebUI>http://[IP]:[PORT:3000]</WebUI>
+  <TemplateURL>https://github.com/dangilbert/docker-templates/blob/master/outline.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/dangilbert/docker-templates/master/img/outline.svg</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DonateText/>
+  <DonateLink/>
+  <Description>Outline: The fastest wiki and knowledge base for growing teams.</Description>
+  <Networking>
+    <Mode>docker</Mode>
+    <Publish>
+      <Port>
+        <HostPort>3000</HostPort>
+        <ContainerPort>3000</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value></Value>
+      <Name>POSTGRES_HOST</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>POSTGRES_DB_NAME</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>POSTGRES_DB_USER</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>POSTGRES_DB_PASSWD</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value></Value>
+      <Name>REDIS_HOST</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>6379</Value>
+      <Name>REDIS_PORT</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="WebUI" Target="3000" Default="3000" Mode="tcp" Description="Container Port: 3000" Type="Port" Display="always" Required="true" Mask="false">3000</Config>
+  <Config Name="POSTGRES_DB_HOST" Target="POSTGRES_DB_HOST" Default="" Mode="" Description="Container Variable: POSTGRES_DB_HOST" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="POSTGRES_DB_PORT" Target="POSTGRES_DB_PORT" Default="" Mode="" Description="Container Variable: POSTGRES_DB_PORT" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="POSTGRES_DB_NAME" Target="POSTGRES_DB_NAME" Default="" Mode="" Description="Container Variable: POSTGRES_DB_NAME" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="POSTGRES_DB_USER" Target="POSTGRES_DB_USER" Default="" Mode="" Description="Container Variable: POSTGRES_DB_USER" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="POSTGRES_DB_PASSWD" Target="POSTGRES_DB_PASSWD" Default="" Mode="" Description="Container Variable: POSTGRES_DB_PASSWD" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Data Storage Path" Target="/data" Default="/mnt/user/appdata/outline/data" Mode="rw" Description="Container Path: /data" Type="Path" Display="advanced" Required="true" Mask="false"></Config>
+  <Config Name="Config Path" Target="/data" Default="/mnt/user/appdata/outline/config" Mode="rw" Description="Container Path: /config" Type="Path" Display="advanced" Required="true" Mask="false"></Config>
+  <Config Name="REDIS_HOST" Target="REDIS_HOST" Default="" Mode="" Description="Container Variable: REDIS_HOST" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="REDIS_PORT" Target="REDIS_PORT" Default="" Mode="" Description="Container Variable: REDIS_PORT" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  
+</Container>
